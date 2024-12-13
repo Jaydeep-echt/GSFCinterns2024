@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashwat Ghadge's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 1rem;
+            border: 3px solid white;
+            animation: zoomIn 2s;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1.5s;
+        }
+        .section h2 {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        .about {
+            text-align: center;
+        }
+        .projects ul {
+            list-style-type: none;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .projects li {
+            margin: 0.5rem 0;
+        }
+        .contact form, .feedback form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input, .feedback textarea {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact button, .feedback button {
+            padding: 0.7rem;
+            border: none;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact button:hover, .feedback button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Shashwat Ghadge's Portfolio</h1>
+    <img src="ss.jpg" alt="Shashwat Ghadge" style="width:150px;height:150px;border-radius:50%;margin-top:1rem;">
+    <p>Phone: 9601326044</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Java Inventory Management System:</strong> A desktop application built using Java to manage inventory and track sales effectively.</li>
+            <li><strong>Library Management System:</strong> Java-based project to streamline book tracking and borrower management in libraries.</li>
+        </ul>
+    </section><strong>
+     I specialize as a Backend Developer, focusing on building robust server-side applications and APIs that power seamless user experiences.</p>
+    </strong></section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" value="Shashwat Ghadge" readonly>
+            <input type="email" name="email" value="shxshwat23@gmail.com" readonly>
+        </form>
+    </section>
+
+    <section id="feedback" class="section feedback">
+        <h2>Feedback</h2>
+        <form action="#" method="post">
+            <textarea name="message" rows="5" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Shashwat Ghadge. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
