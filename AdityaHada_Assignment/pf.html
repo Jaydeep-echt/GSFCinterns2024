@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="pf_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h3 class="info">Aditya Hada</h3>
+        <h3 class="Contactinfo">Contact :
+            <p>adityaahada49@gmail.com</p>
+            <a href="#link" ><img class="conImg" src=https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png alt=""></a>
+            <a href="#link" ><img class="conImg" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt=""></a>
+        </h3>
+        <div id="frontPage">    
+            <img src="Group 11.png" alt="profiePic" id="profilePic">
+            <div class="page">
+                <h1 id="titleTag">Software <br>Developer</h1>
+                <h6 id="tagline">Develop with STYLE</h6>
+            </div>
+            <button class="moreinfo" onclick="swap()">more about me! >></button>
+        </div>
+        <div id="secPage">
+            <div id="navi">
+                <nav>
+                    <button class="naviBut" id="button1" onclick="applyDropShadow('button1','content1')">About</button>
+                    <button class="naviBut" id="button2"  onclick="applyDropShadow('button2','content2')">Projects</button>
+                    <button class="naviBut" id="button3"  onclick="applyDropShadow('button3','content3')">Certificates</button>
+                </nav>
+            </div>
+            <div class="infoContent" id="content1">
+                <p>Hi there! 👋 I'm Aditya, currently in my second year of pursuing a B.Tech in Computer Science and Engineering at GSFC University. Born and raised in India, I’ve always been fascinated by the intersection of technology and creativity. </p>
+                <p>
+                    I’m passionate about exploring the limitless possibilities of software development while expressing my creative side through graphic design. Whether it's coding a project, creating eye-catching visuals, or solving real-world problems, I love challenges that allow me to think outside the box.
+                </p>  
+                <p>
+                    When I’m not busy with academics or projects, you might find me sketching ideas for new designs, exploring emerging tech trends, or learning new skills to broaden my horizons. My ultimate goal? To contribute to impactful projects that blend technical expertise with creativity to make the world a little better.
+                </p> 
+                <p>
+                    Let’s connect and create something amazing together! 😊
+                </p>
+            </div>
+            <div class="infoContent" id="content2">
+                <p> Here are the projects I've worked on...  </p>
+            </div>
+            <div class="infoContent" id="content3">
+                <p> These are the Certificates I have reveived!</p>
+            </div>
+            <button class="moreinfo" onclick="backHome()">  &#8810; back</button>
+        </div>
+    </div>
+    <script>
+        const frontPage =  document.getElementById("frontPage");
+        const secPage = document.getElementById("secPage");
+
+        function swap() {
+            frontPage.style.display="none";
+            secPage.style.display="flex";
+            document.getElementById("button1").style.boxShadow = '5px 5px 10px rgba(0, 0, 0, 0.3)';
+            document.getElementById("content1").style.display="flex"
+        }
+        function backHome() {
+            frontPage.style.display="flex";
+            secPage.style.display="none";           
+        }
+        
+
+
+        function applyDropShadow(clickedButtonId, contentId) {
+            const buttons = document.querySelectorAll('.naviBut'); 
+            const contents = document.querySelectorAll('.infoContent');
+
+            buttons.forEach(button => {
+            button.style.boxShadow = ''; 
+            });
+
+            contents.forEach(content => {
+                content.style.display='none';
+            })
+
+            const clickedButton = document.getElementById(clickedButtonId);
+            const showContent = document.getElementById(contentId)
+            showContent.style.display='flex';
+            clickedButton.style.boxShadow = '5px 5px 15px rgba(0, 0, 0, 0.3)';
+        }
+    </script>
+</body>
+</html>
